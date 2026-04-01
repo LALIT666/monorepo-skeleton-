@@ -1,0 +1,28 @@
+1. Deploying a monorepo (http, ws, (prisma, postgres) next)
+2. env variables
+3. dev vs prod environments, periodic releases
+4. Testing in Cl pipelines
+5. Cert management
+6. CD pipeline to refresh certs every month
+7. CD pipeline to copy the prod DB to dev every day
+
+
+
+##Step one in more depth -- manually 
+1. Create 2 servers
+2. Add node, nginx to both the servers
+3. Clone the monorepo to both the servers
+4. Start 3 processes (next, ws, http)
+5. Point our Domain names to the respective server
+    PRODUCTION:-
+          week-25-http.100xdevs.com
+          week-25-ws.100xdevs.com
+          week-25-fe.100xdevs.com
+    
+    STAGING:-
+          staging.week-25-http.100xdevs.com
+          staging.week-25-ws.100xdevs.com
+          staging.week-25-fe.100xdevs.com
+          
+6. Refresh nginx config
+7. Test that everything is working
