@@ -10,9 +10,9 @@
 
 ##Step one in more depth -- manually 
 1. Create 2 servers
-2. Add node, nginx to both the servers
+2. Add node, nginx to both the servers, install pnpm -g , install npm -g pm2
 3. Clone the monorepo to both the servers
-4. Start 3 processes (next, ws, http)
+4. Start 3 processes (next, ws, http) using pm2
 5. Point our Domain names to the respective server
     PRODUCTION:-
           week-25-http.100xdevs.com
